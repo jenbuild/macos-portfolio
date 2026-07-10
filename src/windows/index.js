@@ -1,5 +1,6 @@
 import Contact from "./Contact";
 import FinderWindow from "./Finder";
+import Home from "./Home";
 import ImageWindow from "./Image";
 import ResumeWindow from "./Resume";
 import SafariWindow from "./Safari";
@@ -9,6 +10,7 @@ import TextWindow from "./Text";
 export {
 	Contact,
 	FinderWindow,
+	Home,
 	ImageWindow,
 	ResumeWindow,
 	SafariWindow,

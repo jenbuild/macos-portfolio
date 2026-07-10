@@ -2,6 +2,7 @@ import { Dock, Navbar, Welcome } from "#components";
 import {
 	Contact,
 	FinderWindow,
+	Home,
 	ImageWindow,
 	ResumeWindow,
 	SafariWindow,
@@ -26,6 +27,7 @@ const App = () => {
 			<TextWindow />
 			<ImageWindow />
 			<Contact />
+			<Home />
 		</main>
 	);
 };
