@@ -4,6 +4,7 @@ import {
 	FinderWindow,
 	Home,
 	ImageWindow,
+	PhotosWindow,
 	ResumeWindow,
 	SafariWindow,
 	TerminalWindow,
@@ -28,6 +29,7 @@ const App = () => {
 			<ImageWindow />
 			<Contact />
 			<Home />
+			<PhotosWindow />
 		</main>
 	);
 };
