@@ -1,5 +1,6 @@
 import { Dock, Navbar, Welcome } from "#components";
 import {
+	Contact,
 	FinderWindow,
 	ImageWindow,
 	ResumeWindow,
@@ -24,6 +25,7 @@ const App = () => {
 			<FinderWindow />
 			<TextWindow />
 			<ImageWindow />
+			<Contact />
 		</main>
 	);
 };
