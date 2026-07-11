@@ -44,7 +44,7 @@ const Photos = () => {
 					{renderList("Photos", photosLinks)}
 				</div>
 
-				<div className="gallery">
+				<div className="gallery h-[600px] overflow-y-auto">
 					<ul>
 						{gallery.map(({ id, imageUrl, name }) => (
 							<li

@@ -1,4 +1,4 @@
-import { Dock, Navbar, Welcome } from "#components";
+import { Dock, Navbar } from "#components";
 import {
 	Contact,
 	FinderWindow,
@@ -18,7 +18,7 @@ const App = () => {
 	return (
 		<main>
 			<Navbar />
-			<Welcome />
+			{/* <Welcome /> */}
 			<Dock />
 
 			<TerminalWindow />
