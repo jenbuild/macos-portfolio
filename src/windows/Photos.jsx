@@ -2,13 +2,14 @@ import { WindowControls } from "#components";
 import { gallery, photosLinks } from "#constants";
 import WindowWrapper from "#hoc/WindowWrapper";
 import useWindowStore from "#store/window";
+import { Mail, Search } from "lucide-react";
 
 const Photos = () => {
 	const { openWindow } = useWindowStore();
 
 	const renderList = (name, items) => (
-		<div>
-			<h3>{name}</h3>
+		<>
+			<h2>{name}</h2>
 			<ul>
 				{items.map((item) => (
 					<li key={item.id}>
@@ -23,7 +24,7 @@ const Photos = () => {
 					</li>
 				))}
 			</ul>
-		</div>
+		</>
 	);
 
 	return (
@@ -31,29 +32,41 @@ const Photos = () => {
 			<div id="window-header">
 				<div id="window-controls">
 					<WindowControls target="photos" />
-					<h2>Photos</h2>
+				</div>
+				<div className="flex w-full justify-end items-center gap-3 text-gray-500">
+					<Mail className="icon" />
+					<Search className="icon" />
 				</div>
 			</div>
 
-			<div className="bg-white flex h-full">
+			<div className="bg-white flex w-full">
 				<div className="sidebar">
 					{renderList("Photos", photosLinks)}
 				</div>
 
-				<ul className="grid grid-cols-2 p-4">
-					{gallery.map((item) => (
-						<li
-							key={item.id}
-							className="p-2"
-						>
-							<img
-								src={item.img}
-								className="cursor-pointer"
-								onClick={() => openWindow("imgfile")}
-							/>
-						</li>
-					))}
-				</ul>
+				<div className="gallery">
+					<ul>
+						{gallery.map(({ id, imageUrl, name }) => (
+							<li
+								key={id}
+								className="p-2"
+							>
+								<img
+									src={imageUrl}
+									alt={name}
+									className="cursor-pointer"
+									onClick={() =>
+										openWindow("imgfile", {
+											id,
+											imageUrl,
+											name,
+										})
+									}
+								/>
+							</li>
+						))}
+					</ul>
+				</div>
 			</div>
 		</>
 	);
