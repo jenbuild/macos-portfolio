@@ -43,6 +43,12 @@ const dockApps = [
 		canOpen: true,
 	},
 	{
+		id: "linkedin",
+		name: "LinkedIn", // was "Linkedin"
+		icon: "linkedin.png",
+		canOpen: true,
+	},
+	{
 		id: "safari",
 		name: "Articles", // was "Safari"
 		icon: "safari.png",
@@ -206,6 +212,112 @@ const gallery = [
 		name: "Image 4",
 	},
 ];
+
+const EDUCATION_EXPERIENCE = [
+	{
+		id: 1,
+		institution: "LBS College Of Engineering, Kasargod",
+		degree: "Bachelor of Technology - BTech",
+		major: "Computer Science and Engineering",
+		duration: "2015 - 2019",
+		image: "/images/lbscek.jpg",
+	},
+	{
+		id: 2,
+		institution:
+			"APJ Abdul Kalam Technological University(KTU), Thiruvananthapuram",
+		degree: "Bachelor of Technology",
+		major: "Computer Science and Engineering",
+		duration: "2015 - 2019",
+		image: "/images/ktu.jpg",
+	},
+];
+
+const LANGUAGES = [
+	{
+		id: 1,
+		name: "English",
+		proficiency: "Fluent",
+	},
+	{
+		id: 2,
+		name: "Hindi",
+		proficiency: "Fluent",
+	},
+	{
+		id: 3,
+		name: "Malayalam",
+		proficiency: "Native",
+	},
+];
+
+const WORK_EXPERIENCE = {
+	id: 1,
+	type: "work",
+	name: "Work Experience",
+	children: [
+		{
+			id: 1,
+			title: "Frontend Developer",
+			type: "Freelance",
+			company: "Freelance",
+			duration: "April 2024 - May 2025",
+			location: "Remote",
+			description:
+				"Worked on event ticketing platform, developing multi-tenant webapp with Next.js, and Tailwind CSS.",
+			image: "/images/blank-company.png",
+		},
+		{
+			id: 2,
+			title: "Web Developer",
+			type: "Full-time",
+			company: "Kriyatma Infotainment",
+			duration: "July 2022 - May 2024",
+			location: "Remote",
+			description:
+				"Worked on various web development projects, including project management  platforms, financial service and banking applications, and custom web applications, using Angular, React.js, Next.js and Node.js.",
+			image: "/images/blank-company.png",
+		},
+	],
+};
+
+const aboutDescription = [
+	"I'm a Frontend Developer with 3 years of experience building responsive, user-focused web applications using React, Next.js, Angular, and TypeScript. I enjoy turning ideas and designs into clean, scalable, and maintainable products while focusing on performance and user experience.",
+
+	"Throughout my career, I've worked on projects across fintech, productivity, travel, and SaaS, collaborating with designers and backend teams to deliver production-ready applications. I'm comfortable working with modern frontend tools, REST APIs, state management, and component-based architectures.",
+
+	"Beyond my professional work, I enjoy building personal projects that help me explore new technologies and improve my engineering skills. I'm currently expanding my expertise into backend development with Node.js and Go while learning more about system design and full-stack architecture.",
+
+	"I believe the best way to grow as a developer is by continuously building, learning, and solving real-world problems. I'm always interested in opportunities where I can contribute, collaborate with talented teams, and keep improving as a software engineer.",
+
+	"Tech Stack: React • Next.js • Angular • TypeScript • JavaScript • Node.js • Tailwind CSS • HTML • CSS • Git • REST APIs",
+];
+
+const SKILLS_LIST = [
+	"React js",
+	"Next.js",
+	"Angular",
+	"JavaScript",
+	"TypeScript",
+	"HTML",
+	"CSS",
+	"TailwindCSS",
+	"Bootstrap",
+	"SCSS",
+	"React Native",
+	"Kotlin",
+	"Nodejs",
+	"ExpressJS",
+	"Git",
+];
+
+export const linkedInData = {
+	workExperience: WORK_EXPERIENCE,
+	educationExperience: EDUCATION_EXPERIENCE,
+	languages: LANGUAGES,
+	about: aboutDescription,
+	skills: SKILLS_LIST,
+};
 
 export {
 	blogPosts,
@@ -497,6 +609,7 @@ const INITIAL_Z_INDEX = 1000;
 
 const WINDOW_CONFIG = {
 	finder: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+	linkedin: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
 	contact: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
 	resume: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
 	safari: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
